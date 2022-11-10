@@ -1,0 +1,34 @@
+
+<div class="calculator">
+    <div class="calculator-screen">
+        <input type="text" class="calculator-input input" [value]="display" disabled />
+        <input type="text" class="calculator-output input" [value]="result" disabled="">
+    </div>
+    <div class="calculator-keys">
+        
+        <button type="button" class="operator" value="+" (click)="recordOperator('+')">+</button>
+        <button type="button" class="operator" value="-" (click)="recordOperator('-')">-</button>
+        <button type="button" class="operator" value="(" (click)="recordBrackets('(')">(</button>
+        <button type="button" class="operator" value=")" (click)="recordBrackets(')')">)</button>
+
+        <button type="button" value="7" (click)="recordNumber(7)">7</button>
+        <button type="button" value="8" (click)="recordNumber(8)">8</button>
+        <button type="button" value="9" (click)="recordNumber(9)">9</button>
+
+
+        <button type="button" value="4" (click)="recordNumber(4)">4</button>
+        <button type="button" value="5" (click)="recordNumber(5)">5</button>
+        <button type="button" value="6" (click)="recordNumber(6)">6</button>
+
+        <button type="button" value="1" (click)="recordNumber(1)">1</button>
+        <button type="button" value="2" (click)="recordNumber(2)">2</button>
+        <button type="button" value="3" (click)="recordNumber(3)">3</button>
+
+        <button type="button" value="0" (click)="recordNumber(0)">0</button>
+        <button type="button" class="decimal" value=".">.</button>
+        <button type="button" class="all-clear" value="all-clear" (click)="clearOutput()">AC</button>
+
+        <button type="button" class="equal-sign" value="=" (click)="calculate()">=</button>
+
+    </div>
+</div>
